@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Multimedia aJam</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		<nav>
+			<a href=""><img src="images/arrow.svg" alt="" />Go Back</a>
+		</nav>
+		<section id="card">
+			<section id="atas">
+				<div>
+					<img src="images/Rectangle 125.svg" alt="" />
+				<img src="images/logo ajam2.jpg" alt="" style="aspect-ratio: 1 / 1; width: 110px; border-radius: 24px;"></div>
+				<h1>Azzam's Multimedia Showcase</h1>
+				<p>This website is where I showcase my multimedia projects, blending creativity with technology to create cool digital experiences.</p>
+				<div class="logo">
+					<a href=""><img src="images/IG.svg" alt="" /></a>
+					<a href=""><img src="images/twitter.svg" alt="" /></a>
+					<a href=""><img src="images/github.svg" alt="" /></a>
+				</div>
+			</section>
+			<section id="bawah">
+				<h2>Projects</h2>
+				<div class="button">
+					<button class="btn active" data-project="ps" style="border: none"><img src="images/Ps.svg" alt="" />PhotoShop</button>
+					<button class="btn" data-project="pr" style="border: none"><img src="images/Pr.svg" alt="" />Premiere Pro</button>
+					<button class="btn" data-project="ae" style="border: none"><img src="images/Ae.svg" alt="" />After Effect</button>
+					<button class="btn" data-project="ai" style="border: none"><img src="images/Ai.svg" alt="" />Illustrator</button>
+					<button class="btn" data-project="br" style="border: none"><img src="images/Blender.svg" alt="" />Blender</button>
+				</div>
+
+				<div id="projects">
+					<div data-project="ps" class="active">
+						<div>
+							<p>test</p>
+							<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+						</div>
+						<div>
+							<p>test</p>
+							<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+						</div>
+						<div>
+							<p>test</p>
+							<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+						</div>
+						<div>
+							<p>test</p>
+							<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+						</div>
+					</div>
+					<div data-project="pr">
+						<iframe src="https://drive.google.com/file/d/1JoWlapPHYdTCt1SamPtzuVbMo7j8WzCx/preview" allow="autoplay"></iframe>
+					</div>
+					<div data-project="ae">
+						<iframe src="https://drive.google.com/file/d/1F50SqvCNlBgazybJA9fJDGFJ_zDkzYME/preview" allow="autoplay"></iframe>
+					</div>
+					<div data-project="ai">
+						<div class="p">
+							<div>
+								<p>test</p>
+								<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+							</div>
+							<div>
+								<p>test</p>
+								<img src="images/poster PAS sejarah azzam.png" width="100%" alt="" />
+							</div>
+						</div>
+					</div>
+					<div data-project="br">
+						<iframe src="https://drive.google.com/file/d/1u35ohQhbjpLKFn6aq-Wv15k25H6R0thh/preview" allow="autoplay"></iframe>
+					</div>
+				</div>
+			</section>
+		</section>
+		<footer>
+			<div style="display: flex; flex-direction: column; gap: 10px">
+				<div style="width: 100%; height: 1px; background-color: black"></div>
+				<div style="display: flex; padding: 0px 0px 10px 0px;">
+					<p style="font-size: 14px; color: #727272; font-weight: 400">© 2024 Azzam’s Portfolio</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			document.querySelectorAll("button[data-project]").forEach((btn) => {
+				btn.addEventListener("click", () => {
+					document.querySelectorAll("div[data-project]").forEach((project) => {
+						project.classList.remove("active");
+						if (project.dataset.project == btn.dataset.project) project.classList.add("active");
+					});
+					document.querySelectorAll(".button > button").forEach((navBtn) => {
+						navBtn.classList.remove("active");
+						if (navBtn.dataset.project == btn.dataset.project) navBtn.classList.add("active");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
