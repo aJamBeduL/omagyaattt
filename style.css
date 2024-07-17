@@ -24,7 +24,7 @@ nav {
 }
 nav a {
 	color: black;
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 700;
 
 	display: flex;
@@ -64,7 +64,7 @@ nav a {
 	padding: 10px;
 }
 h1 {
-	font-size: 69px;
+	font-size: 54px;
 	font-weight: 800;
 }
 #atas p {
