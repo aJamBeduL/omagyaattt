@@ -131,3 +131,8 @@ div[data-project="ps"].active {
 	grid-template-columns: repeat(2, 1fr);
 	gap: 24px;
 }
+
+@media screen and (max-width: 500px)
+.button p{
+	
+}
